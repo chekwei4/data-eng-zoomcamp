@@ -1,5 +1,58 @@
 # Week 1 Notes
 
+## Create Dockerfile
+from: base image
+
+run: bash command
+
+entrypoint: bash
+```
+FROM python:3.9
+
+RUN pip install pandas
+
+ENTRYPOINT [ "bash" ]
+```
+
+## Running sample docker with python code
+
+`Dockerfile`
+```
+FROM python:3.9
+
+RUN pip install pandas
+
+WORKDIR /app
+
+COPY pipeline.py pipeline.py
+
+ENTRYPOINT [ "python", "pipeline.py" ]
+```
+
+`pipeline.py`
+
+```
+import sys
+
+import pandas as pd
+
+# some fancy stuff with 
+
+print(sys.argv)
+
+day = sys.argv[1]
+
+print(f"job finished successfully for day={day}")
+```
+
+Commands to run:
+
+1. `docker build -t test:pandas .`
+
+2. `docker run -it test:pandas 2022-01-19`
+
+<img src="image/output1.png">
+
 ## Run Postgres with Docker
 Command for Mac OS
 
