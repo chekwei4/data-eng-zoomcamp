@@ -1,4 +1,5 @@
 # Week 1 Notes
+By Chekwei Chia
 
 ## Create Dockerfile
 from: base image
@@ -77,7 +78,7 @@ docker run -it \
 
 
 ## Ingest Data into Postgres DB
-
+More details on jupyter notebook via [here](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/Docker_Tutorial/upload-data-chekwei.ipynb)
 
 ## Useful Postgres SQL Commands 
 
