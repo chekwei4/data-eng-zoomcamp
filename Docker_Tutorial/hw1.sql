@@ -8,6 +8,7 @@ and tpep_pickup_datetime < '2021-01-16'
 
 --question4 (Largest tip for each day):
 select tpep_pickup_datetime, tpep_dropoff_datetime, tip_amount from yellow_taxi_data where tip_amount in (select max(tip_amount) from yellow_taxi_data)
+--amount was 1140.44 on 20 Jan
 
 --question5 (Most popular destination)
 --According to https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv, central park 

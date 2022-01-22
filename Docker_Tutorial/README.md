@@ -91,6 +91,15 @@ To get all the columns in the table, with their datatypes
 
 `\d yellow_taxi_data` 
 
+To query data that is of datetime format, we can use [`colName::date`] syntax
+
+Example:
+```
+select * 
+from ...
+where tpep_pickup_datetime::date = '2021-01-14'
+```
+
 ## Connecting pgAdmin and Postgres DB
 `pgcli` is a command line interface (cli) way to interact with Postgres DB, but it might not be the most convenient way to do things. Another way to go about is to use pgAdmin. We do not need to install it on our machine, since we already have docker. We can just pull a docker image that contains the tool and we can use pgAdmin with just a docker container.
 
