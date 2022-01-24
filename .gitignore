@@ -4,4 +4,8 @@ ny_taxi_postgres_data
 
 .DS_Store .
 
-/Docker_Tutorial/data
+/week_1/data
+
+/week_1/terraform/.terraform
+
+/week_1/*.csv

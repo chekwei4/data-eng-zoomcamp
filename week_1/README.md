@@ -147,3 +147,38 @@ docker run -it \
   --name pgadmin-3 \
   dpage/pgadmin4
 ```
+
+## Ingesting data through Docker
+1. Create a ingest_data.py file
+
+- To take in params like `username`, `password`, `host`, `port`, `table_name`, `db_name`, and `url` to download data
+
+2. Modify Dockerfile to include more packages like
+`sqlalchemy`, `psycopg2`, `wget`
+
+3. Build the docker image
+   
+`docker build -t taxi_ingest:v001 .`
+
+4. Run the docker image as a container
+
+Things to note:
+
+- `--network` must be the same as earlier declared, so that all containers can talk to each other
+
+- `--host` and `--port` here must also be the same as earlier declared
+
+```
+URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
+
+docker run -it \
+  --network=pg-network-1 \
+  taxi_ingest:v1 \
+    --user=root \
+    --password=root \
+    --host=pg-database-1 \
+    --port=5432 \
+    --db=ny_taxi \
+    --table=yellow_taxi_docker \
+    --url=${URL}
+```
