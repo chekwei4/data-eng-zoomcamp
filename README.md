@@ -2,7 +2,7 @@
 Brought to you by [Datatalks.Club](https://datatalks.club/)
 
 ## Week 1
-[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/Docker_Tutorial/README.md)
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_1/README.md)
 - What is Docker
 - Running Postgres locally with Docker
 - Putting some data for testing to local postres with Python
