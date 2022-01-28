@@ -9,3 +9,5 @@ ny_taxi_postgres_data
 /week_1/terraform/.terraform
 
 /week_1/*.csv
+
+week_2/airflow/logs/*
