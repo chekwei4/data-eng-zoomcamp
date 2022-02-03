@@ -1,5 +1,28 @@
 # Ingesting data to local Postgres with Airflow
 
+## Data lake vs Data Warehouse
+Difference between data lake and data warehouse
+
+- data lake - usually unstructured, for DA/DS
+    - stream processing, real time analysis
+- data warehouse - usually structured, for BA
+- the idea is to store data as quickly as possible
+
+## ETL vs ELT
+- export transform load vs export load transform
+- ETL - for small amt of data (this is a DW solution)
+    - schema on write, where you define a well defined schema, define the relationships and then write the data
+- ELT - for large amt of data
+    - provides data lake support (schema on read)
+        - write data first, then determine the schema
+    - This is a data lake solution
+
+## DAG
+Directed acyclic graph
+
+- directed, there’s inherent flow representing the dependencies between components
+- acyclic means does not loop/repeat
+
 ## Create DAG
 DAG will have a `name`, `schedule_interval`, and `start_date`.
 - `schedule_interval` is the one we specify the crontab patter. Check out [here](https://crontab.guru/) for crontab cheatsheet. 
@@ -82,3 +105,4 @@ Next, We need to configure the Servers
 2. Select `Server...`
 3. Name could be `docker localhost`
 4. Under the `Connection` tab, hostname must be `pgdatabase` and port is `5432`. All these are based on the way Postgres was spin up when we run `docker-compose up` on week_1's .yml file. 
+
