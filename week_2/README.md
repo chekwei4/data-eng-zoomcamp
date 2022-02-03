@@ -40,30 +40,25 @@ FYI: `{{execution_date.strftime(\"%Y-%m\")}}` is a way to capture the year and m
 
 ## Postgres
 
-f
+Within week_1's .yml file, we have added below. It is understood that by adding the network, we can allow multiple docker-compose files to communicate. 
 
+```
+networks:
+  airflow:
+    external:
+      name: airflow_default
+```
+
+By running `docker network ls` we can find out the network which the container with airflow is running on. 
 
 
 ## pgAdmin
 Two things we need to do. 
 
-1. Setup Postgres and pgAdmin, by ensuring that they both run in the same network. Here, we decclare `network=pg-network-1`
+1. Setup Postgres and pgAdmin, by ensuring that they both run in the same network. Here, we declare `network=airflow_default`
 
-2. Set up pgAdmin and ensure that the `network` also points to the same `pg-network-1`
+2. Recall that our Postgres has already set up `network=airflow_default`
 
-**Important**: Here, we specify that `--name` is `pg-database-2`. We need to note this down, as this will be the `host_name/address` when we set up pgAdmin on the UI later. 
-
-```
-docker run -it \ 
-    -e POSTGRES_USER="root" \
-    -e POSTGRES_PASSWORD="root" \
-    -e POSTGRES_DB="ny_taxi" \
-    -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
-    -p 5431:5431 \
-    --network=pg-network-1 \
-    --name pg-database-2 \
-    postgres:13
-```
 To spin up pgAdmin, we could run below:
 
 ```
@@ -71,7 +66,19 @@ docker run -it \
     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \  
     -e PGADMIN_DEFAULT_PASSWORD="root" \
     -p 8081:80 \ 
-    --network=pg-network-1 \
-    --name pgadmin-3 \ 
+    --network=network=airflow_default \
+    --name pgadmin \ 
     dpage/pgadmin4
 ```
+Double check that `network=airflow_default`
+
+The password and user name for pgAdmin is set as user=`admin@admin.com` and pw='root`.
+
+Access pdAdmin UI via: `http://localhost:8081/` 
+
+Next, We need to configure the Servers
+
+1. Right click `Servers`
+2. Select `Server...`
+3. Name could be `docker localhost`
+4. Under the `Connection` tab, hostname must be `pgdatabase` and port is `5432`. All these are based on the way Postgres was spin up when we run `docker-compose up` on week_1's .yml file. 
