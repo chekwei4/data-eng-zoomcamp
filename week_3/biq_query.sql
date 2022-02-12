@@ -72,12 +72,12 @@ where dropoff_datetime between '2019-01-01' and '2019-03-31'
 and dispatching_base_num in ('B00987', 'B02060', 'B02279');
 
 --Question 5: What will be the best partitioning or clustering strategy when filtering on dispatching_base_num and SR_Flag *
---Answer in homework.md
+--Answer in readme.md
 
 
 --Question 6: What improvements can be seen by partitioning and clustering for data size less than 1 GB *
---Answer in homework.md
+--Answer in readme.md
 
 
 --Question 7: In which format does BigQuery save data
---Answer in homework.md
+--Answer in readme.md
