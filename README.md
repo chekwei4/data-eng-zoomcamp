@@ -11,7 +11,7 @@ Brought to you by [Datatalks.Club](https://datatalks.club/)
 - Docker compose and running pgadmin and postres together with docker-compose
 
 ## Week 2
-Pending..
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_2/README.md)
 
 ## Week 3 
 Pending..

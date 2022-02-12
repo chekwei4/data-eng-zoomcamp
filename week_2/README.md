@@ -1,4 +1,7 @@
-# Ingesting data to local Postgres with Airflow
+# Week 2 Notes
+By Chekwei Chia
+
+## Ingesting data to local Postgres with Airflow
 
 ## Data lake vs Data Warehouse
 Difference between data lake and data warehouse
