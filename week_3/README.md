@@ -52,3 +52,7 @@ According to [google cloud documentation](https://cloud.google.com/bigquery/docs
 
 ## Internals of BigQuery
 Big query uses column oriented structure
+
+## BigQuery with Machine Learning
+Allows us to build models in the data warehouse itself
+- no need to export the data out

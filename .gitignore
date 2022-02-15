@@ -1,5 +1,9 @@
 ny_taxi_postgres_data
 
+__pycache__/
+
+*.py[cod]
+
 .ipynb_checkpoints
 
 .DS_Store .
@@ -11,3 +15,11 @@ ny_taxi_postgres_data
 /week_1/*.csv
 
 week_2/airflow/logs/*
+
+week_3/airflow/logs/*
+
+week_4/airflow/logs/*
+
+week_3/tmp
+
+week_3/serving_dir
