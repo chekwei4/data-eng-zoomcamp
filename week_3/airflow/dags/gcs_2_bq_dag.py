@@ -13,7 +13,7 @@ BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
-
+# BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_dbt')
 
 default_args = {
     "owner": "airflow",
@@ -50,7 +50,7 @@ with DAG(
                 "projectId": PROJECT_ID,
                 "datasetId": BIGQUERY_DATASET,
                 # "tableId": "external_table_yellowtrip_2019",
-                "tableId": "full_yellow_trip_data",
+                "tableId": "full_yellow_trip_data_us",
             },
             "externalDataConfiguration": {
                 "sourceFormat": "PARQUET",
@@ -66,7 +66,7 @@ with DAG(
                 "projectId": PROJECT_ID,
                 "datasetId": BIGQUERY_DATASET,
                 # "tableId": "external_table_yellowtrip_2019",
-                "tableId": "full_green_trip_data",
+                "tableId": "full_green_trip_data_us",
             },
             "externalDataConfiguration": {
                 "sourceFormat": "PARQUET",
