@@ -20,4 +20,4 @@ Brought to you by [Datatalks.Club](https://datatalks.club/)
 - Developing DBT models
 - Visualising data in Google Data Studio
 
-[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_4/README.md)
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_4/DBT_Taxi/README.md)

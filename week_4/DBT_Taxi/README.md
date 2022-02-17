@@ -1,4 +1,5 @@
-Week 4 Notes
+# Week 4 Notes
+By Chekwei Chia
 
 ## DBT
 Data Build Tool
