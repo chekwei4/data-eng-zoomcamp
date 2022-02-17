@@ -14,4 +14,10 @@ Brought to you by [Datatalks.Club](https://datatalks.club/)
 [Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_2/README.md)
 
 ## Week 3 
-Pending..
+
+
+## Week 4
+- Developing DBT models
+- Visualising data in Google Data Studio
+
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_4/README.md)
