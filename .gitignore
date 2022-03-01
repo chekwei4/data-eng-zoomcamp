@@ -23,3 +23,7 @@ week_4/airflow/logs/*
 week_3/tmp
 
 week_3/serving_dir
+
+week_5/.DS_Store
+
+.DS_Store .
