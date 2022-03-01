@@ -148,3 +148,7 @@ flowchart LR;
     classDef running fill:#b70;
     end
 ```
+
+Spark clusters are managed by a **master**, which behaves similarly to an entry point of a Kubernetes cluster. A driver (an Airflow DAG, a computer running a local script, etc.) that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's executors. If any executor fails and becomes offline for any reason, the master will reassign the task to another executor.
+
+Each executor will **fetch a dataframe partition** stored in a Data Lake (usually S3, GCS or a similar cloud provider), do something with it and then store it somewhere, which could be the same Data Lake or somewhere else. If there are more partitions than executors, executors will keep fetching partitions until every single one has been processed.
