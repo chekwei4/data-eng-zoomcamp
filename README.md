@@ -21,3 +21,13 @@ Brought to you by [Datatalks.Club](https://datatalks.club/)
 - Visualising data in Google Data Studio
 
 [Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_4/DBT_Taxi/README.md)
+
+## Week 5
+- Spark
+
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_5/README.md)
+
+## Week 6
+- Kafka
+
+[Notes](https://github.com/chekwei4/data-eng-zoomcamp/blob/master/week_6/README.md)
